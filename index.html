@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Milicos Mods</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      MILICOS <span>MODS</span>
+    </div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="buttons">
+      <a class="discord" target="_blank" href="https://discord.gg/SEUDISCORD">
+        Discord
+      </a>
+      <button class="suporte-btn" onclick="abrirSuporte()">
+        Suporte
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="top-text">QUALIDADE • IMERSÃO • PERFORMANCE</p>
+      <h1>MILICOS<br>MODS</h1>
+      <h2>Transformamos seu servidor em uma experiência única.</h2>
+      <p class="description">
+        Mapas exclusivos, favelas personalizadas, armas otimizadas,
+        fardamentos realistas e props desenvolvidos para elevar
+        o nível do seu servidor FiveM.
+      </p>
+      <div class="hero-buttons">
+        <a href="#produtos" class="gold-btn">VER PRODUTOS</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="cards-section">
+    <div class="card">
+      <img src="img/mapas.jpg" alt="Mapas Exclusivos">
+      <div class="card-content">
+        <h3>MAPAS</h3>
+        <p>Exclusivos</p>
+        <span class="price">R$100</span>
+        <a target="_blank" href="https://wa.me/5521965799060?text=Olá,%20tenho%20interesse%20nos%20MAPAS" class="buy-btn">
+          COMPRAR
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/favelas.jpg" alt="Favelas Personalizadas">
+      <div class="card-content">
+        <h3>FAVELAS</h3>
+        <p>Personalizadas</p>
+        <span class="price">R$150</span>
+        <a target="_blank" href="https://wa.me/5521990899374?text=Olá,%20tenho%20interesse%20nas%20FAVELAS" class="buy-btn">
+          COMPRAR
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/armas.jpg" alt="Armas Otimizadas">
+      <div class="card-content">
+        <h3>ARMAS</h3>
+        <p>Otimizadas</p>
+        <span class="price">R$100</span>
+        <a target="_blank" href="https://wa.me/5521965799060?text=Olá,%20tenho%20interesse%20nas%20ARMAS" class="buy-btn">
+          COMPRAR
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/fardamentos.jpg" alt="Fardamentos Realistas">
+      <div class="card-content">
+        <h3>FARDAMENTOS</h3>
+        <p>Realistas</p>
+        <span class="price">R$200</span>
+        <a target="_blank" href="https://wa.me/5521990899374?text=Olá,%20tenho%20interesse%20nos%20FARDAMENTOS" class="buy-btn">
+          COMPRAR
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/props.jpg" alt="Props Detalhados">
+      <div class="card-content">
+        <h3>PROPS</h3>
+        <p>Detalhados</p>
+        <span class="price">R$30</span>
+        <a target="_blank" href="https://wa.me/5521965799060?text=Olá,%20tenho%20interesse%20nos%20PROPS" class="buy-btn">
+          COMPRAR
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <div class="about-text">
+      <h2>SOBRE NÓS</h2>
+      <p>Desenvolvemos conteúdos premium para FiveM com foco em qualidade visual, otimização e imersão total.</p>
+      <p>Cada projeto é criado para entregar desempenho, realismo e uma experiência diferenciada para servidores RP.</p>
+      <p>Nossa missão é elevar o nível do seu servidor com produtos modernos, exclusivos e profissionais.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>+100</h3>
+        <p>Projetos entregues</p>
+      </div>
+      <div class="stat-box">
+        <h3>+50</h3>
+        <p>Clientes ativos</p>
+      </div>
+      <div class="stat-box">
+        <h3>24H</h3>
+        <p>Suporte dedicado</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <h2>MILICOS MODS</h2>
+    <p>“Tudo posso naquele que me fortalece.” Filipenses 4:13</p>
+    <span>© 2026 Milicos Mods - Todos os direitos reservados</span>
+  </footer>
+
+  <div id="painelSuporte" class="painel-suporte" onclick="fecharSuporte(event)">
+    <div class="suporte-box" onclick="event.stopPropagation()">
+      <h2>SUPORTE DIRETO</h2>
+      <p style="color: #bbb; margin-bottom: 15px; font-size: 14px;">Digite sua dúvida abaixo para ser atendido no WhatsApp:</p>
+      <textarea id="mensagem" placeholder="Ex: Olá, gostaria de tirar uma dúvida sobre os mapas..."></textarea>
+      
+      <div class="suporte-footer-btns">
+        <button class="btn-enviar-wpp" onclick="enviarMensagem()">ABRIR NO WHATSAPP</button>
+        <button class="btn-fechar" onclick="fecharSuporteBotao()">FECHAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function abrirSuporte(){
+      document.getElementById('painelSuporte').style.display = 'flex';
+    }
+
+    function fecharSuporteBotao(){
+      document.getElementById('painelSuporte').style.display = 'none';
+    }
+
+    function fecharSuporte(e){
+      document.getElementById('painelSuporte').style.display = 'none';
+    }
+
+    function enviarMensagem(){
+      const msg = document.getElementById('mensagem').value;
+      if(msg.trim() === '') {
+        alert('Por favor, digite uma mensagem antes de enviar.');
+        return;
+      }
+      // Redireciona direto para o seu WhatsApp com o texto que ele digitou
+      const textoFormatado = encodeURIComponent(msg);
+      window.open(`https://wa.me/5521965799060?text=${textoFormatado}`, '_blank');
+      fecharSuporteBotao();
+    }
+  </script>
+</body>
+</html>
